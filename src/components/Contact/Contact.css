@@ -1,66 +1,72 @@
-.contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+.contact-section {
+  display: flex;
+  justify-content: center;
+  padding: 10rem 0 15rem;
 }
 
-.contact-info {
+.contact-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-}
-
-.contact-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.contact-icon {
-  background: var(--primary);
-  color: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
+  width: 85%;
+  max-width: 600px;
 }
 
-.contact-form {
-  background: white;
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+.contact-heading {
+  color: var(--primary);
+  font-size: 4rem;
+  font-family: 'Space Grotesk', sans-serif;
+  margin-bottom: 2rem;
 }
 
-.form-group {
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-title {
+  color: var(--secondary);
+  font-size: 2.5rem;
+  font-family: 'Space Grotesk', sans-serif;
   margin-bottom: 1.5rem;
 }
 
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+.contact-description {
+  color: var(--gray);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 3rem;
 }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid var(--light-gray);
-  border-radius: 8px;
-  font-family: inherit;
+.contact-button {
+  padding: 1.25rem 2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  font-family: 'Space Grotesk', sans-serif;
+  background: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
 }
 
-.form-group textarea {
-  height: 150px;
-  resize: vertical;
+.contact-button:hover {
+  background: rgba(100, 255, 218, 0.1);
 }
 
-@media (max-width: 992px) {
-  .contact-container {
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 8rem 0 12rem;
+  }
+  
+  .contact-heading {
+    font-size: 3rem;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
   }
 }
