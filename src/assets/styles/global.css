@@ -3,11 +3,33 @@
   --primary-dark: #1d3d9c;
   --secondary: #1e293b;      
   --light: #f9fafb;          
-  --gray: #4b5563;           
+  --gray: #4b5563;            
   --light-gray: #e5e7eb;     
   --transition: all 0.3s ease;
   --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --border-radius: 8px;
+  
+  /* Light mode colors */
+  --bg-color: #ffffff;
+  --text-color: #1e293b;
+  --card-bg: #ffffff;
+  --section-bg: #f9fafb;
+}
+
+html.dark-mode,
+.dark-mode {
+  --primary: #ff6b35;
+  --primary-dark: #e55a2b;
+  --secondary: #ffffff;
+  --light: #1e293b;
+  --gray: #cbd5e1;
+  --light-gray: #475569;
+  
+  /* Dark mode colors */
+  --bg-color: #0f172a;
+  --text-color: #ffffff;
+  --card-bg: #1e293b;
+  --section-bg: #1e293b;
 }
 
 * {
@@ -18,10 +40,11 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  color: var(--secondary);
-  background-color: white;
+  color: var(--text-color);
+  background-color: var(--bg-color);
   line-height: 1.6;
   overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5 {

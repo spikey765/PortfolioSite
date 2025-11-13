@@ -1,12 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import About from './components/About/About';
 import Projects from './components/Projects/Projects';
+import Skills from './components/Skills/Skills';
 import Contact from './components/Contact/Contact';
 import Footer from './components/Footer/Footer';
 import SocialSidebar from './components/SocialSidebar/SocialSidebar';
+import ThemeToggle from './components/ThemeToggle/ThemeToggle';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -94,15 +97,19 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App" ref={appRef}>
-        <SocialSidebar />
-        <Header />
-        <Hero />
-        <About />
-        <Projects />
-        <Contact />
-        <Footer />
-      </div>
+      <ThemeProvider>
+        <div className="App" ref={appRef}>
+          <ThemeToggle />
+          <SocialSidebar />
+          <Header />
+          <Hero />
+          <About />
+          <Projects />
+          <Skills />
+          <Contact />
+          <Footer />
+        </div>
+      </ThemeProvider>
     </BrowserRouter>
   );
 }

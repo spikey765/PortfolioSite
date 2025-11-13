@@ -1,10 +1,11 @@
 footer {
-  background: transparent;
+  background: var(--bg-color);
   color: var(--gray);
   padding: 3rem 0;
   text-align: center;
   border-top: 1px solid var(--light-gray);
   font-family: 'Space Grotesk', sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .footer-simple p {

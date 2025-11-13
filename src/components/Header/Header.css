@@ -8,7 +8,17 @@ header {
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 1.2rem 0;
-  transition: var(--transition);
+  transition: var(--transition), background-color 0.3s ease;
+}
+
+.dark-mode header {
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+html.dark-mode header {
+  background: rgba(15, 23, 42, 0.95);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 header.scrolled {
@@ -24,7 +34,8 @@ header.scrolled {
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
-  color: var(--secondary); /* Changed from --dark to --secondary */
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 .logo span {
@@ -38,9 +49,10 @@ header.scrolled {
 }
 
 .nav-links a {
-  color: var(--secondary); /* Changed from --dark to --secondary */
+  color: var(--text-color);
   font-weight: 500;
   position: relative;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:after {
@@ -64,7 +76,8 @@ header.scrolled {
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--secondary); /* Changed from --dark to --secondary */
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -75,9 +88,16 @@ header.scrolled {
     top: 100%;
     left: 0;
     width: 100%;
-    background: white;
+    background: var(--card-bg);
     padding: 1rem 0;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .dark-mode .nav-links,
+  html.dark-mode .nav-links {
+    background: var(--card-bg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
   }
   
   .mobile-menu-btn {

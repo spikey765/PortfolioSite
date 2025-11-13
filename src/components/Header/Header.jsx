@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './Header.css';
-import resumePDF from '../../assets/documents/CV.pdf';
 
 const Header = () => {
   useEffect(() => {
@@ -49,7 +48,7 @@ const Header = () => {
           <li><a href="#contact">Contact</a></li>
           <li>
             <a 
-              href={resumePDF} 
+              href="/assets/documents/CV.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="resume-link"

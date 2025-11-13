@@ -6,7 +6,8 @@
   position: relative;
   overflow: hidden;
   padding-top: 4rem;
-  background: white; /* White background */
+  background: var(--bg-color);
+  transition: background-color 0.3s ease;
 }
 
 .hero-content {
@@ -18,17 +19,19 @@
   font-size: 4rem;
   margin-bottom: 1.5rem;
   line-height: 1.1;
-  color: #000; /* Black title */
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 .hero-name {
-  color: #000; /* Keep name black */
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
 .typewriter {
   display: inline-block;
   position: relative;
-  color: #1e40af; /* Dark blue for typed text */
+  color: var(--primary);
   min-height: 1.5em;
   font-weight: 600;
 }
@@ -37,7 +40,7 @@
   display: inline-block;
   margin-left: 3px;
   animation: blink 1s infinite;
-  color: #1e40af; /* Dark blue cursor */
+  color: var(--primary);
 }
 
 @keyframes blink {
@@ -47,10 +50,11 @@
 
 .hero-subtitle {
   font-size: 1.5rem;
-  color: #4b5563; /* Gray subtitle */
+  color: var(--gray);
   margin-bottom: 2rem;
   font-weight: 400;
   max-width: 600px;
+  transition: color 0.3s ease;
 }
 
 .hero-btns {
@@ -62,7 +66,7 @@
 .btn {
   display: inline-block;
   padding: 0.8rem 1.8rem;
-  background: #1e40af; /* Dark blue background */
+  background: var(--primary);
   color: white;
   border-radius: 4px;
   font-weight: 500;
@@ -74,19 +78,24 @@
 }
 
 .btn:hover {
-  background: #1d3d9c; /* Slightly darker blue on hover */
+  background: var(--primary-dark);
   transform: translateY(-3px);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn-outline {
   background: transparent;
-  border: 2px solid #1e40af; /* Dark blue border */
-  color: #1e40af; /* Dark blue text */
+  border: 2px solid var(--primary);
+  color: var(--primary);
 }
 
 .btn-outline:hover {
-  background: rgba(30, 64, 175, 0.1); /* Light blue background on hover */
+  background: rgba(255, 107, 53, 0.1);
+}
+
+.dark-mode .btn-outline:hover,
+html.dark-mode .btn-outline:hover {
+  background: rgba(255, 107, 53, 0.2);
 }
 
 /* Hero image positioning */
@@ -104,9 +113,14 @@
   width: 100%;
   height: auto;
   border-radius: 10px;
-  border: 3px solid #1e40af; /* Dark blue border */
+  border: 3px solid var(--primary);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.dark-mode .hero-portrait,
+html.dark-mode .hero-portrait {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 .hero-portrait:hover {

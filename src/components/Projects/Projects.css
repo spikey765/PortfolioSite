@@ -1,7 +1,13 @@
 .projects-section {
-  background: linear-gradient(to bottom, #ffffff, #f8fafc);
+  background: linear-gradient(to bottom, var(--bg-color), var(--section-bg));
   padding: 8rem 0;
   position: relative;
+  transition: background 0.3s ease;
+}
+
+.dark-mode .projects-section,
+html.dark-mode .projects-section {
+  background: linear-gradient(to bottom, var(--bg-color), var(--section-bg));
 }
 
 .projects-section::before {
@@ -14,14 +20,20 @@
   background: linear-gradient(to right, transparent, rgba(30, 64, 175, 0.1), transparent);
 }
 
+.dark-mode .projects-section::before,
+html.dark-mode .projects-section::before {
+  background: linear-gradient(to right, transparent, rgba(255, 107, 53, 0.2), transparent);
+}
+
 .section-title {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 2.75rem;
   font-weight: 700;
   margin-bottom: 4rem;
   position: relative;
-  color: var(--secondary);
+  color: var(--text-color);
   letter-spacing: -0.02em;
+  transition: color 0.3s ease;
 }
 
 .section-number {
@@ -52,6 +64,12 @@
   height: 100%;
   border: 1px solid rgba(226, 232, 240, 0.8);
   position: relative;
+}
+
+.dark-mode .project-card,
+html.dark-mode .project-card {
+  background: var(--card-bg);
+  border-color: rgba(51, 65, 85, 0.8);
 }
 
 .project-card::before {
@@ -128,11 +146,12 @@
 .project-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: var(--secondary);
+  color: var(--text-color);
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 700;
   letter-spacing: -0.01em;
   line-height: 1.3;
+  transition: color 0.3s ease;
 }
 
 .project-description {
@@ -141,6 +160,22 @@
   flex-grow: 1;
   line-height: 1.7;
   font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.dark-mode .project-description,
+html.dark-mode .project-description {
+  color: var(--gray);
+}
+
+.achievement-highlight {
+  color: #d4af37;
+  font-weight: 700;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  display: inline-block;
+  text-shadow: 0 1px 2px rgba(212, 175, 55, 0.3);
 }
 
 .project-tags {
@@ -162,9 +197,23 @@
   letter-spacing: 0.01em;
 }
 
+.dark-mode .project-tag,
+html.dark-mode .project-tag {
+  background: linear-gradient(135deg, #334155, #475569);
+  color: var(--gray);
+  border-color: rgba(71, 85, 105, 0.6);
+}
+
 .project-card:hover .project-tag {
   background: linear-gradient(135deg, #eff6ff, #dbeafe);
   border-color: rgba(30, 64, 175, 0.2);
+  color: var(--primary);
+}
+
+.dark-mode .project-card:hover .project-tag,
+html.dark-mode .project-card:hover .project-tag {
+  background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(255, 107, 53, 0.1));
+  border-color: rgba(255, 107, 53, 0.3);
   color: var(--primary);
 }
 
@@ -179,7 +228,7 @@
   align-items: center;
   gap: 0.6rem;
   padding: 0.7rem 1.4rem;
-  background: white;
+  background: var(--card-bg);
   border: 2px solid var(--primary);
   border-radius: 8px;
   color: var(--primary);

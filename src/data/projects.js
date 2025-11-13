@@ -33,7 +33,7 @@ export const projectsData = [
   },
   {
     title: "Newsify - AI Photojournalism",
-    description: "Web app that uses AI to generate photojournalism content. Creates compelling visual stories from textual descriptions.",
+    description: "Web app that uses AI to generate photojournalism content. Creates compelling visual stories from textual descriptions. Won 1st place in UniCS' challenge at GUH'24.",
     tags: ["OpenAI API", "Flask", "React", "HTML", "CSS"],
     github: "https://github.com/Blacbrd/GUHack2024-AiPhotoJournalist",
     demo: "https://devpost.com/software/greatunihack-unics-challenge-team-yfive?ref_content=my-projects-tab&ref_feature=my_projects",
@@ -41,7 +41,7 @@ export const projectsData = [
   },
   {
     title: "GymBro - AI Fitness Tracker",
-    description: "Web app that uses AI to track and analyse strength training exercises based on web camera input. Provides personalised feedback and progress tracking.",
+    description: "Web app that uses AI to track and analyse strength training exercises based on web camera input. Provides personalised feedback and progress tracking. Won 3rd place GDG's challenge at StudentHack'24.",
     tags: ["Google MediaPipe", "Gemini API", "Flask", "React", "TypeScript", "HTML", "CSS"],
     github: "https://github.com/spikey765/studenthack-2025",
     demo: "https://devpost.com/software/gymbro-qjokxs?ref_content=user-portfolio&ref_feature=in_progress",

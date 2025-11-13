@@ -1,10 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './About.css';
-import taimorImage from '../../assets/images/taimor.jpg';
-import pfp1Image from '../../assets/images/pfp1.jpg';
-import { skillsData } from '../../data/skills';
 
 const About = () => {
+  const images = [
+    { src: '/assets/images/taimor.jpg', alt: 'Taimor Alam' },
+    { src: '/assets/images/pfp1.jpg', alt: 'Taimor Alam ' },
+    { src: '/assets/images/pic.jpg', alt: 'Taimor Alam' },
+    { src: '/assets/images/pic1.jpg', alt: 'Taimor Alam' }
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000); // Change image every 4 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <section id="about" className="about-section">
       <div className="container">
@@ -15,7 +29,7 @@ const About = () => {
         <div className="about-content">
           <div className="about-text">
             <p>
-              Hi there! I'm Taimor, a penultimate year CS student at the University of Manchester, an aspiring Software Engineer and Data Science enthusiast. 
+              Hi there! I'm Taimor, a penultimate year CS student at the University of Manchester, an aspiring Software Engineer and DevOps enthusiast. 
             </p>   
             <p>
               With a strong background in computer science, I thrive in agile, collaborative work environments where I can apply my skills in software development and data analysis.
@@ -38,42 +52,36 @@ const About = () => {
             <p>
               Let's Connect! Open to opportunities, collaborations and networking.
             </p>
-            
-            <div className="skills-section">
-              <h2 className="skills-heading">
-                <span className="about-number">02. </span>Skills
-              </h2>
-              
-              <div className="skills-grid">
-                {skillsData.map((category, index) => (
-                  <div key={index} className="skill-category">
-                    <h3 className="skill-category-title">{category.category}</h3>
-                    <ul className="skill-list">
-                      {category.skills.map((skill, idx) => (
-                        <li key={idx}>{skill}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
           
           <div className="about-image-container">
-            <div className="image-frame">
-              <img 
-                src={taimorImage} 
-                alt="Taimor Alam" 
-                className="portrait-image"
-              />
-            </div>
-            
-            <div className="image-frame second-image">
-              <img 
-                src={pfp1Image} 
-                alt="Taimor Alam Professional" 
-                className="portrait-image"
-              />
+            <div className="image-carousel">
+              <div 
+                className="carousel-track"
+                style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+              >
+                {images.map((image, index) => (
+                  <div key={index} className="carousel-slide">
+                    <div className="image-frame">
+                      <img 
+                        src={image.src} 
+                        alt={image.alt} 
+                        className="portrait-image"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="carousel-indicators">
+                {images.map((_, index) => (
+                  <button
+                    key={index}
+                    className={`carousel-indicator ${index === currentIndex ? 'active' : ''}`}
+                    onClick={() => setCurrentIndex(index)}
+                    aria-label={`Go to slide ${index + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>

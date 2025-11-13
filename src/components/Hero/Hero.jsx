@@ -1,7 +1,6 @@
 // src/components/Hero/Hero.jsx
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
-import frontImage from '../../assets/images/front.jpg';
 
 const Hero = () => {
   const [text, setText] = useState('');
@@ -61,7 +60,7 @@ const Hero = () => {
       </div>
       <div className="hero-image">
         <img 
-          src={frontImage} 
+          src="/assets/images/front.jpg" 
           alt="Taimor Alam" 
           className="hero-portrait"
         />

@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   padding: 10rem 0 15rem;
+  background: var(--bg-color);
+  transition: background-color 0.3s ease;
 }
 
 .contact-container {
