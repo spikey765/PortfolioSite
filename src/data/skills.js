@@ -8,6 +8,7 @@ export const skillsData = [
       "SvelteKit", 
       "Next.js",
       "Three.js",
+      "Mermaid.js",
       "Tailwind CSS", 
       "HTML5",
       "CSS3"
@@ -18,9 +19,14 @@ export const skillsData = [
     skills: [
       "Supabase",
       "PostgreSQL",
+      "MYSQL",
       "FastAPI",
       "Python Flask", 
       "Node.js",
+      "Express",
+      "PHP",
+      "GraphQL",
+      "MongoDB",
       "AWS (EC2, S3, VPC, Route 53)",
       "Terraform",
       "RISC-V Assembly",
@@ -36,6 +42,7 @@ export const skillsData = [
       "HCL",
       "GitHub Actions CI/CD",
       "Docker",
+      "CI/CD Pipelines",
       "Selenium",
       "Tesseract OCR",
       "Overpass API"

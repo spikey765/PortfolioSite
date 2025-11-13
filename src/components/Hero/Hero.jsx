@@ -1,7 +1,7 @@
 // src/components/Hero/Hero.jsx
 import React, { useState, useEffect } from 'react';
 import './Hero.css';
-import frontImage from '/assets/images/front.jpg';
+import frontImage from '../../assets/images/front.jpg';
 
 const Hero = () => {
   const [text, setText] = useState('');

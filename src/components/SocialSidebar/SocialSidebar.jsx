@@ -1,4 +1,4 @@
-
+// src/components/SocialSidebar/SocialSidebar.jsx
 import React from 'react';
 import { FaGithub, FaLinkedinIn, FaEnvelope } from 'react-icons/fa';
 import './SocialSidebar.css';

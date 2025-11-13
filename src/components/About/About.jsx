@@ -1,7 +1,7 @@
 import React from 'react';
 import './About.css';
-import taimorImage from '/assets/images/taimor.jpg';
-import pfp1Image from '/assets/images/pfp1.jpg';
+import taimorImage from '../../assets/images/taimor.jpg';
+import pfp1Image from '../../assets/images/pfp1.jpg';
 import { skillsData } from '../../data/skills';
 
 const About = () => {

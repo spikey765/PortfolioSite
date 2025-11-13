@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Header.css';
-import resumePDF from '/assets/documents/CV.pdf';
+import resumePDF from '../../assets/documents/CV.pdf';
 
 const Header = () => {
   useEffect(() => {
