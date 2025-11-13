@@ -5,9 +5,11 @@ import { projectsData } from '../../data/projects';
 
 const Projects = () => {
   return (
-    <section className="projects" id="projects">
+    <section id="projects" className="projects-section">
       <div className="container">
-        <h2 className="section-title">Projects</h2>
+        <h2 className="section-title">
+          <span className="section-number">03. </span>Projects
+        </h2>
         <div className="projects-grid">
           {projectsData.map((project, index) => (
             <ProjectCard key={index} project={project} />

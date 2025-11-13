@@ -2,34 +2,53 @@ export const skillsData = [
   {
     category: "Frontend",
     skills: [
-      "JavaScript (ES6+)", 
-      "React.js", 
-      "Vue.js", 
-      "HTML5 & CSS3", 
+      "JavaScript", 
       "TypeScript", 
-      "Responsive Design"
+      "React.js",
+      "SvelteKit", 
+      "Next.js",
+      "Three.js",
+      "Tailwind CSS", 
+      "HTML5",
+      "CSS3"
     ]
   },
   {
     category: "Backend",
     skills: [
-      "Node.js", 
-      "Express", 
-      "Python", 
-      "RESTful APIs", 
-      "GraphQL", 
-      "MongoDB"
+      "Supabase",
+      "PostgreSQL",
+      "FastAPI",
+      "Python Flask", 
+      "Node.js",
+      "AWS (EC2, S3, VPC, Route 53)",
+      "Terraform",
+      "RISC-V Assembly",
+      "GitHub Actions"
     ]
   },
   {
-    category: "DevOps & Tools",
+    category: "Tools & DevOps",
     skills: [
-      "Git & GitHub", 
-      "Docker", 
-      "CI/CD Pipelines", 
+      "Git, GitLab & GitHub", 
       "AWS", 
-      "Webpack", 
-      "Jest & Testing"
+      "Terraform",
+      "HCL",
+      "GitHub Actions CI/CD",
+      "Docker",
+      "Selenium",
+      "Tesseract OCR",
+      "Overpass API"
+    ]
+  },
+  {
+    category: "APIs & Services",
+    skills: [
+      "Google Gemini API",
+      "Google Maps API",
+      "Google Flights API",
+      "OpenAI API",
+      "Overpass API"
     ]
   },
   {
@@ -40,7 +59,8 @@ export const skillsData = [
       "Team Leadership", 
       "Agile Methodology", 
       "Mentoring", 
-      "Project Management"
+      "Project Management",
+      "Hackathon Experience"
     ]
   }
 ];
