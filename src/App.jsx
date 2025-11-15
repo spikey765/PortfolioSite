@@ -81,12 +81,6 @@ function App() {
             top: target.offsetTop - 80,
             behavior: 'smooth'
           });
-          
-          // Close mobile menu if open
-          const navLinks = document.querySelector('.nav-links');
-          if (navLinks && window.getComputedStyle(navLinks).display === 'flex') {
-            navLinks.style.display = 'none';
-          }
         }
       }
     };

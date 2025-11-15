@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './Header.css';
 
 const Header = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   useEffect(() => {
     const handleScroll = () => {
       const header = document.getElementById('header');
@@ -17,8 +19,7 @@ const Header = () => {
   }, []);
 
   const toggleMobileMenu = () => {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+    setIsMobileMenuOpen(prev => !prev);
   };
 
   // Scroll to top function for logo click
@@ -41,17 +42,18 @@ const Header = () => {
         >
           Taimor<span>Alam</span>
         </a>
-        <ul className="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+          <li><a href="#about" onClick={() => setIsMobileMenuOpen(false)}>About</a></li>
+          <li><a href="#projects" onClick={() => setIsMobileMenuOpen(false)}>Projects</a></li>
+          <li><a href="#skills" onClick={() => setIsMobileMenuOpen(false)}>Skills</a></li>
+          <li><a href="#contact" onClick={() => setIsMobileMenuOpen(false)}>Contact</a></li>
           <li>
             <a 
               href="/assets/documents/CV.pdf" 
               target="_blank" 
               rel="noopener noreferrer"
               className="resume-link"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Resume
             </a>

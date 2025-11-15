@@ -94,6 +94,10 @@ header.scrolled {
     transition: background-color 0.3s ease;
   }
   
+  .nav-links.mobile-open {
+    display: flex;
+  }
+  
   .dark-mode .nav-links,
   html.dark-mode .nav-links {
     background: var(--card-bg);
